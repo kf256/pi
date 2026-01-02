@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="display">
+            <p id="positionDisplay"></p>
+            <div id="taskDigitsDiv">
+                <tt id="digitsBeforeDisplay"></tt>
+                <tt id="digitsInput"></tt>
+                <tt id="digitsAfterDisplay"></tt>
+            </div>
+            <br>
+            <div id="solutionDisplay">
+                <tt id="solutionDisplayBefore"></tt>
+                <tt id="solutionDisplayTask"></tt>
+                <tt id="solutionDisplayAfter"></tt>
+            </div>
+        </div>
+        <br>
+        <button class="button" id="settingsButton" onclick="showSettings()">⚙</button>
+        <div id="settings">
+            <div id="settingsBox">
+                <label for="positionSetting">Position:</label>
+                <input id="positionSetting" type="number" min="0" oninput="updatePositionSetting()">
+                <br>
+                <br>
+                <button class="button" id="applyButton" onclick="apply()">Apply</button>
+            </div>
+        </div>
+        <br>
+        <div id="bottom">
+            <div id="startButtonContainer"><button class="button" id="startButton" onclick="start()">start</button></div>
+            <div id="inputDiv">
+                <div id="keyboard"></div>
+            </div>
+        </div>
+        <script src="scripts/ui.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

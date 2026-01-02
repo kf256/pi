@@ -1,0 +1,126 @@
+:root {
+    --background: #cfc;
+    --text: #044;
+    --keys: #044;
+    --lines: #080;
+    --areas: #8fc;
+    --darkAreas: #4c8;
+}
+
+html {
+    touch-action: none;
+    height: 100%;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+#positionDisplay {
+    font-size: 20px;
+}
+
+#display {
+    font-size: 30px;
+}
+
+.button {
+    font-size: 50px;
+    background-color: var(--areas);
+    border: 5px solid var(--lines);
+    border-radius: 20px;
+    user-select: none;
+}
+
+@media (hover: hover) {
+    .button:hover{
+        background-color: var(--darkAreas);
+    }
+}
+
+#positionSetting {
+    width: 100px;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+div:has(#startButton) {
+    transition: height 0.5s;
+    overflow: hidden;
+}
+
+#inputDiv {
+    transition: height 0.5s;
+    overflow: hidden;
+    height: 0px;
+}
+
+span {
+    transition: background-color 0.2s;
+}
+
+#settingsButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: #0004;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+}
+
+#settingsBox {
+    background-color: var(--background);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#settingsBox input {
+    font-size: 30px;
+    background-color: var(--areas);
+    color: var(--text);
+    border: 5px solid var(--lines);
+    border-radius: 20px;
+    outline: none;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+    gap: 10px;
+}
+
+#keyboard div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 100px;
+    font-family: Arial;
+    color: var(--keys);
+    
+    transition: background-color 0.1s;
+}
